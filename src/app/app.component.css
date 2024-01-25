@@ -5,10 +5,12 @@
     text-align: center;
 }
 
-textarea{
+#text{
   overflow-y: scroll;
   height: 80px;
-    width: 380px;
+  width: 380px;
+  background-color: rgb(104 181 169);
+  color: beige;
 }
 .mainBox {
     width: 400px;

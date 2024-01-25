@@ -3,9 +3,9 @@
   <input #box (keyup.enter)="calcvalue(box.value)" class="mainWindow" type="text" oninput="this.value=this.value.replace(/[^0-9+\-*/.]/g, '').replace(/(\..*)\./g, '$1');" [(ngModel)]= "toshow" >
   <br>
   <br> 
-  <!-- <div>
-      <textarea name="" id="" cols="30" rows="10" readonly [(ngModel)]="final">{{getHistory()}}</textarea>
-  </div> -->
+  <div>
+      <textarea name="text" id="text" cols="30" rows="10"  [(ngModel)]="history" placeholder="History" readonly></textarea>
+  </div>
 
   <br>
   <div class="all_btns">

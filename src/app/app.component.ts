@@ -8,7 +8,8 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  host: {ngSkipHydration: 'true'}
 })
 export class AppComponent {
 
@@ -17,6 +18,7 @@ export class AppComponent {
   toshow='';
   currvalue='';
   flag=false;
+  history='';
   
   writetoinput(value:string) {
 
@@ -26,6 +28,7 @@ export class AppComponent {
     }
     else{
       this.currvalue = this.currvalue + value 
+    //   this.history=this.currvalue +"=";
     }
     if((this.toshow=='' && this.currvalue[this.currvalue.length-1]=='/')||(this.toshow=='' && this.currvalue[this.currvalue.length-1]=='*'))
     {
@@ -51,8 +54,12 @@ export class AppComponent {
       alert("This is an operator. Please begin with a number.");
     }
     
+    this.history=this.history+this.currvalue+"="
     this.toshow=eval(this.currvalue)
+    this.history= this.history+this.toshow+"\n";
     this.currvalue = this.toshow
+
+    console.log(this.history)
   }
   
 
