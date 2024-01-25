@@ -1,0 +1,91 @@
+#heading
+{
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+textarea{
+  overflow-y: scroll;
+  height: 80px;
+    width: 380px;
+}
+.mainBox {
+    width: 400px;
+    height: 700px;
+    border: 5px solid rgb(13, 73, 75);
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(56, 116, 112);
+  }
+
+.mainWindow{
+    background-color: rgb(45, 87, 84);
+    height: 80px;
+    width: 380px;
+    border: 0cap;
+    border-radius: 10px;
+    box-shadow: 10cap;
+    font-size: xx-large;
+    display: flex;
+    text-align: right;
+    color: beige;
+    padding: 10px;
+   
+  }
+  
+  .num_btns button{
+    height: 80px;
+    width: 80px;
+    padding: 20px;
+    color: beige;
+  }
+
+  .all_btns button{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(45, 87, 84);
+    border-radius: 20px;
+    font-size: larger;
+    border: 0cap;
+  
+  }
+
+  .num_btns button :hover {
+    background-color: rgb(30, 49, 46); 
+    
+  }
+
+  .fun_btns button{
+    text-align: center;
+    background-color: rgb(150, 172, 89);
+    color: beige;
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  .fun_btns button:hover {
+    background-color: rgb(87, 100, 51); 
+    
+  }
+
+  #clear{
+    background-color: rgb(146, 27, 49);
+    color: beige;
+  }
+
+  #back{
+    background-color: rgb(53, 56, 34);
+  }
+
+  #enter{
+    background-color: rgb(53, 56, 34);
+  }
+
+  #text{
+    background-color: rgb(30, 49, 46);
+  }
