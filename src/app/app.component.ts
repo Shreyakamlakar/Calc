@@ -75,10 +75,12 @@ export class AppComponent {
 
   calcvalue(solve:any)
   {
-    if(solve.charAt(0)=='0')
-    {
-      solve = solve.slice(1,0)
+    try{
+      this.toshow=eval(solve);
     }
-    this.toshow=eval(solve)
+    catch(e){
+      this.toshow='error'
+      
+    }
   }
 }
