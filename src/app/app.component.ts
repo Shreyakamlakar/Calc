@@ -14,52 +14,41 @@ export class AppComponent {
 
 
   title = 'Calculator';
-  toshow='0';
+  toshow='';
   currvalue='';
-  final='';
-  flag=false
+  flag=false;
   
   writetoinput(value:string) {
 
-    if(this.currvalue[this.currvalue.length-1]=='/'||this.currvalue[this.currvalue.length-1]=='*'||this.currvalue[this.currvalue.length-1]=='-'||this.currvalue[this.currvalue.length-1]=='+')
+    if((this.currvalue[this.currvalue.length-1]=='/'||this.currvalue[this.currvalue.length-1]=='*'||this.currvalue[this.currvalue.length-1]=='-'||this.currvalue[this.currvalue.length-1]=='+')&& (value==='+' ||value==='-' ||value==='*' ||value==='/'))
     {
       alert("invalid");
-      this.toshow='0'
     }
     else{
       this.currvalue = this.currvalue + value 
     }
-    if((this.toshow=='0' && this.currvalue[this.currvalue.length-1]=='/')||(this.toshow=='0' && this.currvalue[this.currvalue.length-1]=='*'))
+    if((this.toshow=='' && this.currvalue[this.currvalue.length-1]=='/')||(this.toshow=='' && this.currvalue[this.currvalue.length-1]=='*'))
     {
       alert("Wrong operator");
       this.flag=true
-      if(this.flag==true)
-      {
-        this.toshow='0'
-        this.currvalue=''
-        this.flag=false
-      }
     }
-    
+    else{
+      this.toshow = this.currvalue
+    }
      
-    this.getHistory();
-    this.toshow = this.currvalue
+    if(this.flag==true){
+      this.toshow=''
+      this.currvalue=''
+      this.flag=false
+    }
+   
   }
-
-  getHistory()
-  {
-    return this.final=this.currvalue;
-  }
-
-  
 
   enter()
   {
     if(this.toshow[this.toshow.length-1]=='/'||this.toshow[this.toshow.length-1]=='-'||this.toshow[this.toshow.length-1]=='*'||this.toshow[this.toshow.length-1]=='+')
     {
       alert("This is an operator. Please begin with a number.");
-      this.toshow=''
-      this.currvalue=''
     }
     
     this.toshow=eval(this.currvalue)
@@ -69,7 +58,7 @@ export class AppComponent {
 
   clear()
   {
-    this.toshow='0'
+    this.toshow=''
     this.currvalue=''
   }
 
@@ -80,7 +69,7 @@ export class AppComponent {
 
     if(this.toshow=='')
     {
-      this.toshow='0'
+      this.toshow=''
     }
   }
 
